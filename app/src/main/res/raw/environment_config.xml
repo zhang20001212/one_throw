@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xml>
+    <Environment>PRD</Environment>
+    <!-- 服务地址 -->
+    <ServerURL>
+        <DEV>http://notice.ocheng.me</DEV>
+        <PRE>http://beta.ecpay.1toall.net</PRE>
+        <PRD>http://ecpay.1toall.net</PRD>
+    </ServerURL>
+    <!-- 加密服务地址 -->
+    <SecurityURL>
+        <DEV>http://10.1.41.25:8081</DEV>
+        <PRE>http://121.40.248.195:8082</PRE>
+        <PRD>https://secret.cjia.com/mobile</PRD>
+    </SecurityURL>
+    <!-- 图片服务地址 -->
+    <ImageURL>
+        <DEV>http://image.cjbnb.com</DEV>
+        <PRE>http://image.cjbnb.com</PRE>
+        <PRD>http://image.cjia.com</PRD>
+    </ImageURL>
+</xml>

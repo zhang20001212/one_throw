@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.onetoall.yjt">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+
+    <!--激光推送sdk-->
+    <!-- Required -->
+    <permission
+        android:name="com.onetoall.yjt.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <!-- Required -->
+    <uses-permission android:name="com.onetoall.yjt.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- Optional. Required for location feature -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".controller.WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".controller.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controller.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controller.pay.CollectMoneyTypeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".config.EnvironmentConfigActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controller.pay.QRAlipayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controller.store.PayChannelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controller.pay.QRWeixinActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controller.pay.PaySuccessActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controller.order.PayOrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controller.pay.PayCashActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controller.profile.PersonalInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controller.store.StoreDetailInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controller.profile.PersonInfoChangeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controller.profile.PersonPwdChangeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".controller.store.QRCodeManagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controller.store.QRCodeDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controller.store.QRCodeScannerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controller.profile.PersonPwdFindActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controller.store.ChoseStoreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controller.order.ChannelRatioActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controller.store.CustomerManagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controller.profile.PersonnelManagementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controller.AppUpdateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransparentAppTheme" />
+        <activity
+            android:name=".controller.profile.MessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controller.profile.MessageDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name="com.qw.download.DownloadService" />
+        <!-- User defined. 用户自定义的广播接收器-->
+        <receiver
+            android:name=".receiver.PushReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <!--Required 用户注册SDK的intent-->
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <!--Required 用户接收SDK消息的intent-->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!--Required 用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!--Required 用户打开自定义通知栏的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+                <category android:name="com.onetoall.yjt" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="584e0596734be47be300080b"></meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="UMENG" />
+    </application>
+
+</manifest>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/status_height"
+        android:background="@color/colorPrimary" />
+
+    <com.onetoall.yjt.widget.QToolbar
+        android:id="@id/toolbar"
+        style="@style/QToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <RelativeLayout
+            android:id="@+id/mNotifyMessageLayout"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="@dimen/common_activity_padding_8"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/icon_menu_mail" />
+
+            <ImageView
+                android:id="@+id/mNotifyMessageTipsImg"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/skin_tips_newmessage" />
+        </RelativeLayout>
+
+    </com.onetoall.yjt.widget.QToolbar>
+
+    <Button
+        android:id="@+id/moneyCollectAmountBtn"
+        style="@style/mBlueBtnStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="20dp"
+        android:text="去收款￥0.0" />
+
+    <TextView
+        android:id="@+id/moneyCollectHava"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="当前已选0个商品"
+        android:textColor="@color/collect_tips_text_color" />
+
+    <include layout="@layout/layout_default_line" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="7"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/ic_collect_money_tips"
+                android:gravity="center"
+                android:text="备注"
+                android:textSize="16dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="16"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_price_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:gravity="right|center_vertical"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="¥0.00"
+                android:textColor="@color/deep_gray_text"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/moneyCollectBack"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingRight="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_collect_moneyy_back"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/layout_default_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="23"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="0.1dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:background="@color/divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="随手输"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16dp" />
+
+                <include layout="@layout/layout_default_line" />
+            </LinearLayout>
+        </FrameLayout>
+
+
+        <com.onetoall.yjt.widget.row.MyGridView
+            android:id="@+id/cashCalacutarGv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="16"
+            android:background="@android:color/white"
+            android:horizontalSpacing="3dp"
+            android:numColumns="3"
+            android:padding="3dp"
+            android:verticalSpacing="3dp" />
+    </LinearLayout>
+</LinearLayout>

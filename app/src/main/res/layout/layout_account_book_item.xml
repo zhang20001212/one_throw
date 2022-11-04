@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/mGroupTitleLabel"
+        style="@style/mContentHintStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:padding="@dimen/common_activity_padding_8"
+        android:text="2016-10-10" />
+
+    <include layout="@layout/layout_default_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/mAccountBookItemIconImg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="@dimen/common_activity_padding_8"
+            android:src="@drawable/ic_collect_money_type_alipay" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mAccountBookItemStateLabel"
+                style="@style/mContentStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支付宝收款成功" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/mAccountBookItemCreateTimeLabel"
+                    style="@style/mContentSubStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="09:09:09" />
+
+                <TextView
+                    android:id="@+id/mAccountBookItemNickLabel"
+                    style="@style/mContentSubStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_activity_padding_16"
+                    android:text="晴天" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/mAccountBookItemAmountLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.01"
+            android:textSize="@dimen/text_size_16"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/mAccountBookItemActionImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_activity_padding_8"
+            android:layout_marginRight="@dimen/common_activity_padding_8"
+            android:src="@drawable/action_row" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/mLine"
+        layout="@layout/layout_default_line" />
+</LinearLayout>

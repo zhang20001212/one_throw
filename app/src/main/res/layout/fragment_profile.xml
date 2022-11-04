@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/status_height"
+        android:background="@color/colorPrimary" />
+
+    <com.onetoall.yjt.widget.QToolbar
+        android:id="@id/toolbar"
+        style="@style/QToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/mSwipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/mProInfoLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/widgets_general_row_select"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/common_activity_padding_8"
+                    android:paddingBottom="@dimen/common_activity_padding_16"
+                    android:paddingLeft="@dimen/common_activity_padding_8"
+                    android:paddingRight="@dimen/common_activity_padding_8"
+                    android:paddingTop="@dimen/common_activity_padding_16">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginRight="@dimen/common_activity_padding_8"
+                        android:src="@drawable/icon_placeholder" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/mStoreNameLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="商户:神马测试商户１" />
+
+                        <TextView
+                            android:id="@+id/mUserNameLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/common_activity_padding_8"
+                            android:layout_marginTop="@dimen/common_activity_padding_8"
+                            android:text="商户:神马测试商户１" />
+
+                        <TextView
+                            android:id="@+id/mUserJobNameLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="商户:神马测试商户１" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/action_row" />
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/line"
+                    layout="@layout/layout_default_line" />
+
+                <include layout="@layout/layout_default_line" />
+
+                <com.onetoall.yjt.widget.row.ContainerView
+                    android:id="@+id/mContainerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <Button
+        android:id="@+id/mProfileLogoutBtn"
+        style="@style/mBlueBtnStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_activity_padding_16"
+        android:text="@string/mProfileLogoutBtn" />
+</LinearLayout>

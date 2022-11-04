@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/widgets_general_row_select"
+        android:gravity="center_vertical"
+        android:padding="@dimen/common_activity_padding_8"
+        android:paddingBottom="@dimen/common_activity_padding_16"
+        android:paddingLeft="@dimen/common_activity_padding_8"
+        android:paddingRight="@dimen/common_activity_padding_8"
+        android:paddingTop="@dimen/common_activity_padding_16">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginRight="@dimen/common_activity_padding_8"
+            android:src="@drawable/icon_placeholder" />
+
+        <LinearLayout
+            android:id="@+id/mProInfoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mStoreNameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="门店:" />
+
+            <TextView
+                android:id="@+id/mUserNameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_activity_padding_8"
+                android:layout_marginTop="@dimen/common_activity_padding_8"
+                android:text="姓名:" />
+
+            <TextView
+                android:id="@+id/mUserJobNameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="职位:" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/layout_default_line" />
+
+    <include
+        layout="@layout/layout_default_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginTop="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/mPersonalInfoSex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/widget_general_row_label_margin_left"
+            android:layout_marginTop="@dimen/widget_general_row_label_margin_left"
+            android:text="性别：" />
+
+        <TextView
+            android:id="@+id/mPersonalInfoAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/widget_general_row_label_margin_left"
+            android:layout_marginTop="@dimen/common_activity_padding_8"
+            android:text="账号：" />
+
+        <TextView
+            android:id="@+id/mPersonalInfoAddTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/widget_general_row_label_margin_left"
+            android:layout_marginTop="@dimen/common_activity_padding_8"
+            android:text="添加时间：" />
+
+        <TextView
+            android:id="@+id/mPersonalInfoShop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/widget_general_row_label_margin_left"
+            android:layout_marginTop="@dimen/common_activity_padding_8"
+            android:text="商户名：" />
+
+        <TextView
+            android:id="@+id/mPersonalInfoArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/widget_general_row_label_margin_left"
+            android:layout_marginTop="@dimen/common_activity_padding_8"
+            android:text="所属区域：" />
+
+        <TextView
+            android:id="@+id/mPersonalInfoAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_activity_padding_16"
+            android:layout_marginLeft="@dimen/widget_general_row_label_margin_left"
+            android:layout_marginTop="@dimen/common_activity_padding_8"
+            android:text="门店地址：" />
+    </LinearLayout>
+
+    <include layout="@layout/layout_default_line" />
+
+    <com.onetoall.yjt.widget.row.ContainerView
+        android:id="@+id/mContainerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

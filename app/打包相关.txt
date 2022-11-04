@@ -1,0 +1,9 @@
+https://git.oschina.net/tom.cn/Ecpay.git
+
+www.lthack.com
+
+切换环境：res-raw-environment_config将environment 对应 值相应的标签
+
+如果是正式上线将isDev属性值改为false
+
+测试阶段发包DEBUG_VERSION 值依次累加修改

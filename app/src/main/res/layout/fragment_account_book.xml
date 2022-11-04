@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/status_height"
+        android:background="@color/colorPrimary" />
+
+    <com.onetoall.yjt.widget.QToolbar
+        android:id="@id/toolbar"
+        style="@style/QToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.qw.framework.widget.pull.PullRecyclerView
+            android:id="@id/mPullRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.onetoall.yjt.widget.LoadingView
+            android:id="@id/mLoadingView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/shap_raw_border_btn"
+    >
+    <TextView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:id="@+id/calacularTypeLabel"
+        android:textSize="15sp"
+        android:textColor="#3d3d3d"
+        />
+
+</RelativeLayout>

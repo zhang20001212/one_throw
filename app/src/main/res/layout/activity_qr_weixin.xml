@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/mContentFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <SurfaceView
+                android:id="@+id/preview_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center" />
+
+            <com.onetoall.yjt.zxing.ViewfinderView
+                android:id="@+id/viewfinder_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/mQrCodeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mQrAlipayGuideHintLabel"
+                style="@style/mTitleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/common_activity_padding_16"
+                android:paddingRight="@dimen/common_activity_padding_16"
+                android:text="@string/mQrScannerWeixinGuideHintLabel" />
+
+            <TextView
+                android:id="@+id/mQrAlipayPriceLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥55"
+                style="@style/mTitleStyle"
+                android:layout_marginTop="@dimen/common_activity_padding_8"
+                />
+
+            <TextView
+                android:id="@+id/mQrAlipayGuideLabel"
+                style="@style/mTitleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/common_activity_padding_16"
+                android:text="使用方法"
+                android:textColor="@color/blue" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <com.onetoall.yjt.widget.tab.v2.TabLayout
+        android:id="@+id/mTabLayoutV2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/black" />
+</LinearLayout>

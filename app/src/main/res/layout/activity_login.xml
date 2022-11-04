@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    android:gravity="right"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <RelativeLayout
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="220dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/login_icon_3" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/mLoginAccountEdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_activity_padding_16"
+        android:layout_marginRight="@dimen/common_activity_padding_16"
+        android:background="@drawable/denglu_white"
+        android:hint="@string/mLoginAccountHint"
+        android:inputType="number"
+        android:lines="1"
+        android:maxLength="11"
+        android:padding="@dimen/common_activity_padding_8"
+        android:textColorHint="@color/white"
+        android:textSize="@dimen/text_size_14" />
+
+    <EditText
+        android:id="@+id/mLoginPasswordEdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_activity_padding_16"
+        android:layout_marginRight="@dimen/common_activity_padding_16"
+        android:layout_marginTop="@dimen/common_activity_padding_8"
+        android:background="@drawable/denglu_white"
+        android:hint="@string/mLoginPasswordHint"
+        android:inputType="textPassword"
+        android:lines="1"
+        android:padding="@dimen/common_activity_padding_8"
+        android:textColorHint="@color/white"
+        android:textSize="@dimen/text_size_14" />
+
+    <TextView
+        android:id="@+id/mForgetPwdLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/common_activity_padding_16"
+        android:text="@string/mForgetPwdLabel"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/text_size_14" />
+
+    <Button
+        android:id="@+id/mLoginCommitBtn"
+        style="@style/mBlueBtnStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_activity_padding_16"
+        android:layout_marginRight="@dimen/common_activity_padding_16"
+        android:layout_marginTop="32dp"
+        android:text="@string/mLoginLabel" />
+
+
+    <Button
+        android:id="@+id/mEnvironmentSettingsBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_activity_padding_16"
+        android:layout_marginRight="@dimen/common_activity_padding_16"
+        android:text="@string/mEnvironmentSettingsLabel" />
+</LinearLayout>
+

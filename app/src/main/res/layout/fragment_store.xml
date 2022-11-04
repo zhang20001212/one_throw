@@ -1,0 +1,96 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/status_height"
+        android:background="@color/colorPrimary" />
+
+    <com.onetoall.yjt.widget.QToolbar
+        android:id="@id/toolbar"
+        style="@style/QToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp" />
+    <!-- TODO: Update blank fragment layout -->
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/mSwipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/mStoreInfoLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/widgets_general_row_select"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="@dimen/common_activity_padding_16"
+                    android:paddingLeft="@dimen/common_activity_padding_16"
+                    android:paddingRight="@dimen/common_activity_padding_8"
+                    android:paddingTop="@dimen/common_activity_padding_16">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/mStoreShopNameLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="商户："/>
+
+                        <TextView
+                            android:id="@+id/mStoreNameLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/common_activity_padding_8"
+                            android:layout_marginTop="@dimen/common_activity_padding_8"
+                            android:text="门店："/>
+
+                        <TextView
+                            android:id="@+id/mStoreShopOwnerLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="店长："/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/action_row" />
+                </LinearLayout>
+
+                <include layout="@layout/layout_default_line" />
+
+                <com.onetoall.yjt.widget.row.ContainerView
+                    android:id="@+id/mContainerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <Button
+        android:id="@+id/mStoreChoseBtn"
+        style="@style/mBlueBtnStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_activity_padding_16"
+        android:text="@string/mStoreChoseBtn" />
+</LinearLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+    <LinearLayout
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <include layout="@layout/line_huise" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="今日销售额"
+            android:padding="8dp"
+            style="@style/mContentHintStyle"
+            />
+
+        <include layout="@layout/line_huise" />
+
+        <include
+            android:id="@+id/zhifubao_1"
+            layout="@layout/activity_channel_ratio_item_include" />
+
+        <include layout="@layout/line_huise" />
+
+        <include
+            android:id="@+id/weixin_1"
+            layout="@layout/activity_channel_ratio_item_include" />
+
+        <include layout="@layout/line_huise" />
+
+        <include
+            android:id="@+id/yimafu_1"
+            layout="@layout/activity_channel_ratio_item_include"
+            android:visibility="gone" />
+
+
+        <include
+            android:id="@+id/xianjing_1"
+            layout="@layout/activity_channel_ratio_item_include" />
+
+        <include layout="@layout/line_huise" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7天销售额"
+            android:padding="8dp"
+            style="@style/mContentHintStyle" />
+
+        <include layout="@layout/line_huise" />
+
+        <include
+            android:id="@+id/zhifubao_7"
+            layout="@layout/activity_channel_ratio_item_include" />
+
+        <include layout="@layout/line_huise" />
+
+        <include
+            android:id="@+id/weixin_7"
+            layout="@layout/activity_channel_ratio_item_include" />
+
+        <include layout="@layout/line_huise" />
+
+        <include
+            android:id="@+id/yimafu_7"
+            layout="@layout/activity_channel_ratio_item_include"
+            android:visibility="gone" />
+
+
+        <include
+            android:id="@+id/xianjing_7"
+            layout="@layout/activity_channel_ratio_item_include" />
+
+        <include layout="@layout/line_huise" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30天销售额"
+            android:padding="8dp"
+            style="@style/mContentHintStyle" />
+
+        <include layout="@layout/line_huise" />
+
+        <include
+            android:id="@+id/zhifubao_30"
+            layout="@layout/activity_channel_ratio_item_include" />
+
+        <include layout="@layout/line_huise" />
+
+        <include
+            android:id="@+id/weixin_30"
+            layout="@layout/activity_channel_ratio_item_include" />
+
+        <include layout="@layout/line_huise" />
+
+        <include
+            android:id="@+id/yimafu_30"
+            layout="@layout/activity_channel_ratio_item_include"
+            android:visibility="gone" />
+
+
+        <include
+            android:id="@+id/xianjing_30"
+            layout="@layout/activity_channel_ratio_item_include" />
+
+        <include layout="@layout/line_huise" />
+
+
+    </LinearLayout>
+
+
+</ScrollView>

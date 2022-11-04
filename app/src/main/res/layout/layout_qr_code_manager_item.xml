@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:padding="@dimen/common_activity_padding_16">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/mQRCodeItemTitleLabel"
+            style="@style/mContentStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="bianhao 1111111111" />
+
+        <TextView
+            android:id="@+id/mQRCodeItemMsgLabel"
+            style="@style/mContentHintStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_activity_padding_8"
+            android:text="11111111111111111111" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/action_row" />
+</LinearLayout>

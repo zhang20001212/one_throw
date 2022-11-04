@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mRootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#80000000"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/mAppUpdateTitleLabel"
+            style="@style/mContentStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_activity_padding_8"
+            android:text="有新版本需要更新" />
+
+        <include layout="@layout/layout_divider" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_activity_padding_8"
+            android:text="更新说明" />
+
+        <TextView
+            android:id="@+id/mAppUpdateContentLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_activity_padding_8"
+            android:text="1.xxxxxxxx\n2.xxxxxxxx" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/common_activity_padding_8"
+            android:progress="0"
+            />
+
+        <TextView
+            android:id="@+id/mAppUpdateProgressInfoLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_activity_padding_8"
+            android:text="0/0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_activity_padding_16"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_marginRight="1dp"
+                android:id="@+id/mAppUpdateLeftBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                style="@style/mBlueBtnStyle"
+                android:text="下次再说" />
+
+            <Button
+                android:id="@+id/mAppUpdateRightBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                style="@style/mBlueBtnStyle"
+                android:text="更新" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

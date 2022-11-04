@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#069CFF</color>
+    <color name="colorPrimaryDark">#069CFF</color>
+    <color name="colorAccent">#FF4081</color>
+    <!--<color name="colorPrimary">#3F51B5</color>-->
+    <!--<color name="colorPrimaryDark">#303F9F</color>-->
+    <!--<color name="colorAccent">#FF4081</color>-->
+
+    <color name="windowBg">#fafafa</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="white">#ffffff</color>
+
+    <color name="white_30">#30ffffff</color>
+    <!-- gray scale -->
+    <color name="black">#323232</color>
+    <color name="black_transparent_80">#80000000</color>
+    <!-- basic colors -->
+    <color name="green">#27D34D</color>
+    <color name="blue">#069CFF</color>
+    <color name="dark_blue">#1976D2</color>
+    <color name="orange">#FF9D2F</color>
+    <color name="red">#FF432F</color>
+    <color name="transparent">#00ffffff</color>
+
+    <color name="widgets_general_row_pressed">#e5e5e5</color>
+    <color name="widgets_general_row_normal">#ffffff</color>
+    <color name="widgets_general_row_line">#e5e5e5</color>
+
+    <!--other color-->
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="defaul_line">#cccccc</color>
+    <color name="collect_tips_text_color">#a8a8a8</color>
+    <color name="deep_gray_text">#A7A7A7</color>
+    <color name="BaseBlueColor">#069cff</color>
+    <color name="pay_cash_gray_bg">#fafafa</color>
+    <color name="pay_cash_gary_text">#a8a8a8</color>
+
+
+    <color name="back">#fafafa</color>
+    <color name="back_2">#f1f1f1</color>
+    <color name="back_3">#dcdcdc</color>
+
+    <color name="ziti_1">#cccccc</color>
+    <color name="ziti_2">#3d3d3d</color>
+    <color name="ziti_3">#7e808a</color>
+    <color name="ziti_4">#5e5e5e</color>
+    <color name="ziti_5">#069cff</color>
+
+    <color name="bian_1">#f0f1ee</color>
+    <color name="bian_2">#d9d9d9</color>
+    <color name="bian_3">#cccccc</color>
+
+</resources>
